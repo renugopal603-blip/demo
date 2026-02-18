@@ -1,6 +1,0 @@
-services:
-  - type: web
-    name: static-site
-    env: static
-    buildCommand: ""
-    staticPublishPath: .
