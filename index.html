@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertflair Header Replica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <!-- Placeholder for the logo. You'll need the actual image file "logo.png" or "logo.svg" -->
+                <div class="logo-wrapper">
+                    <!-- CSS Gradient Logo Placeholder -->
+                    <div class="logo-icon-css">
+                        <div class="logo-circle"></div>
+                    </div>
+                    <div class="logo-text-group">
+                        <span class="logo-main">advertflair</span>
+                        <span class="logo-tagline">Your Digital Transformation Partner</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link">Solutions</a></li>
+                    <li><a href="#" class="nav-link">Services</a></li>
+                    <li><a href="#" class="nav-link">Blog</a></li>
+                    <li><a href="#" class="nav-link">Careers</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="#" class="btn btn-primary">Portfolio</a>
+                    <a href="#" class="btn btn-outline">Contact Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-container">
+                <!-- Left Content -->
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Innovating<br>
+                        3D Production<br>
+                        at Scale
+                    </h1>
+                    <p class="hero-subtitle">
+                        Revolutionize your projects with our cutting-edge 3D Modeling Services. Garnish the attention of
+                        your customers with accurate and powerful 3D Modeling, Animation, Rendering and AR Designing
+                        Services from Advertflair. Exhibit every aspect of your product realistically!
+                    </p>
+                    <a href="#" class="btn-hero-cta">
+                        Watch Video
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12 5L19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="hero-visuals">
+                    <!-- Abstract Background Shapes -->
+                    <div class="hero-bg-shape shape-purple"></div>
+                    <div class="hero-bg-shape shape-orange"></div>
+                    <div class="hero-bg-shape shape-pink"></div>
+
+                    <!-- Main Hero Image -->
+                    <div class="hero-image-container">
+                        <img id="main-hero-image" src="Demo img1.webp" alt="3D Production Hero Image"
+                            class="hero-full-image">
+                    </div>
+
+                    <!-- Floating Thumbnails Dock -->
+                    <div class="floating-thumbnails">
+                        <div class="thumbnail-item active" onclick="changeHeroImage('Demo img1.webp', this)">
+                            <img src="Demo img1.webp" alt="Watch Thumbnail">
+                        </div>
+                        <div class="thumbnail-item" onclick="changeHeroImage('demo img2.webp', this)">
+                            <img src="demo img2.webp" alt="Shoe Thumbnail">
+                        </div>
+                        <div class="thumbnail-item" onclick="changeHeroImage('demo img3.webp', this)">
+                            <img src="demo img3.webp" alt="Chair Thumbnail">
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <script>
+                    function changeHeroImage(imageSrc, element) {
+                        // Update main image
+                        const mainImage = document.getElementById('main-hero-image');
+                        mainImage.style.opacity = '0'; // Fade out
+
+                        setTimeout(() => {
+                            mainImage.src = imageSrc;
+                            mainImage.style.opacity = '1'; // Fade in
+                        }, 200);
+
+                        // Update active state
+                        document.querySelectorAll('.thumbnail-item').forEach(item => {
+                            item.classList.remove('active');
+                        });
+                        element.classList.add('active');
+                    }
+                </script>
+            </div>
+        </section>
+
+
+
+        <section class="clients-section">
+            <div class="container clients-container">
+                <!-- Left Text Content -->
+                <div class="clients-text">
+                    <span class="section-label">OUR CLIENTS</span>
+                    <h2 class="clients-heading">
+                        The World's Best<br>
+                        Companies Trust<br>
+                        Advertflair for 3D<br>
+                        Modeling
+                    </h2>
+                    <a href="#" class="btn-clients-explore">
+                        Explore More
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+
+                <!-- Right Logo Marquee -->
+                <div class="clients-marquee-wrapper">
+                    <!-- Row 1: Scrolling Left -->
+                    <div class="marquee-row scroll-left">
+                        <div class="marquee-group">
+                            <div class="client-card">G4 by Golpa</div>
+                            <div class="client-card">MiniDoge</div>
+                            <div class="client-card">Meva</div>
+                            <div class="client-card">Annapoorna</div>
+                        </div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="marquee-group">
+                            <div class="client-card">G4 by Golpa</div>
+                            <div class="client-card">MiniDoge</div>
+                            <div class="client-card">Meva</div>
+                            <div class="client-card">Annapoorna</div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Scrolling Right (or different speed Left) -->
+                    <div class="marquee-row scroll-right">
+                        <div class="marquee-group">
+                            <div class="client-card">ZiVolve</div>
+                            <div class="client-card">KW</div>
+                            <div class="client-card">fourbee</div>
+                            <div class="client-card">Nanette</div>
+                        </div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="marquee-group">
+                            <div class="client-card">ZiVolve</div>
+                            <div class="client-card">KW</div>
+                            <div class="client-card">fourbee</div>
+                            <div class="client-card">Nanette</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="who-we-are">
+            <div class="container who-container">
+                <!-- Left Visuals -->
+                <div class="who-visuals">
+                    <div class="who-image-wrapper">
+                        <!-- Decorative Blobs -->
+                        <img src="demo img5.webp" alt="" class="who-blob who-blob-1">
+                        <img src="demo img6.png" alt="" class="who-blob who-blob-2">
+
+                        <img src="demo img7.png" alt="Person Working" class="who-main-image">
+
+                        <!-- Overlay Abstract Image -->
+                        <div class="who-overlay-card">
+                            <img src="demo img4.webp" alt="Abstract 3D Art" class="who-overlay-image">
+
+                            <!-- Floating Badge -->
+                            <div class="who-badge">
+                                <div class="play-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="white"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 3l14 9-14 9V3z" />
+                                    </svg>
+                                </div>
+                                <span>Pioneering 3D Technology</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="who-content">
+                    <span class="section-label">WHO WE ARE</span>
+                    <h2 class="who-heading">Pioneers in the 3D space</h2>
+                    <p class="who-text">
+                        As a boutique 3D modeling studio, Advertflair specializes in delivering high-quality content
+                        efficiently and at scale. Located in New York, Dallas, Dubai, and Chennai, we assist
+                        organizations
+                        in achieving 3D fluency, creating immersive shopping experiences with Virtual Product
+                        Visualization
+                        and 3D E-commerce Solutions.
+                    </p>
+                    <a href="#" class="btn-who-explore">
+                        More About Us
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            </div>
+
+            <!-- Creating Value Section -->
+            <section class="value-section">
+                <div class="container value-container">
+                    <!-- Left Text Content -->
+                    <div class="value-content">
+                        <span class="section-label">WHAT WE DO</span>
+                        <h2 class="value-heading">
+                            Creating Value<br>
+                            with High-Quality<br>
+                            3D Product Models
+                        </h2>
+                        <p class="value-text">
+                            We help companies create global impact by delivering large-scale omni-channel sales and
+                            marketing
+                            content. At the forefront of technology-enabled design, we create value in today's 3D, AR,
+                            VR,
+                            and
+                            AI environments. Almost all industries now utilize 3D product modeling as a core marketing
+                            tactic,
+                            and Advertflair is a leading 3D modeling service.
+                        </p>
+                        <p class="value-text">
+                            Learn which 3D solution will benefit your project. Our team of skilled and experienced
+                            professionals
+                            use cutting-edge tools and software to create photorealistic and detailed views of your
+                            products
+                            from multiple angles.
+                        </p>
+                        <p class="value-text">
+                            Our focus on user experience and design enables engagement and drives constant improvements,
+                            making
+                            us the partner of choice for our customers.
+                        </p>
+                        <a href="#" class="btn-value-projects">
+                            View Projects
+                            <span class="arrow">→</span>
+                        </a>
+                    </div>
+
+                    <!-- Right Visuals -->
+                    <div class="value-visuals">
+                        <div class="value-image-wrapper">
+                            <!-- Abstract Background Shapes -->
+                            <div class="value-blob value-blob-orange"></div>
+                            <div class="value-blob value-blob-pink"></div>
+
+                            <!-- Glass Card Background -->
+                            <div class="value-glass-card"></div>
+
+                            <!-- Main Image -->
+                            <img src="demo10.webp" alt="Camera 3D Model" class="value-main-image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+    <!-- Floating UI Elements -->
+    <div class="accessibility-tab">
+        <span class="accessibility-icon">Accessibility</span>
+    </div>
+
+    <div class="chat-widget">
+        <div class="chat-badge">AI</div>
+        <div class="chat-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z" stroke="white"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+    </div>
+</body>
+
+</html>
